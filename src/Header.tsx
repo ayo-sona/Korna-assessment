@@ -25,7 +25,7 @@ const Header = () => {
             </div>
   
             {/* Center - Search (Hidden on small mobile, visible on larger screens) */}
-            <div className="hidden sm:block flex-1 max-w-md mx-4">
+            <div className="hidden sm:block md:px-2 flex-1 max-w-md mx-4">
               <Spacebar />
             </div>
   
