@@ -6,7 +6,6 @@ import Rightpart from './components/HeaderComponents/rightpart';
 const Header = () => {
     return (
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
-        {/* Centered "open in app" button */}
         <div className="flex lg:hidden justify-center py-2 bg-gray-50 border-b border-gray-100">
           <button className="flex items-center text-center text-gray-600 hover:text-gray-800 px-4 py-1 rounded-full hover:bg-gray-100 transition-colors">
             <span className="text-sm">open in app</span>
