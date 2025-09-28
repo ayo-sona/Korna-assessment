@@ -1,0 +1,211 @@
+.sidebar {
+    width: 20rem; /* 320px */
+    padding-left: 2rem; /* 32px */
+    display: none;
+  }
+  
+  .sidebar-section {
+    margin-bottom: 3rem; /* 48px */
+  }
+  
+  .section-title {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    margin-bottom: 1.5rem; /* 24px */
+    color: #111827;
+  }
+  
+  /* Staff Picks */
+  .staff-picks {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* 24px */
+  }
+  
+  .staff-pick-item {
+    display: flex;
+    gap: 0.75rem; /* 12px */
+  }
+  
+  .pick-avatar {
+    width: 2rem; /* 32px */
+    height: 2rem; /* 32px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  
+  .pick-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .pick-content {
+    flex: 1;
+  }
+  
+  .pick-title {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    color: #111827;
+    line-height: 1.25;
+    margin: 0 0 0.25rem 0; /* 0 0 4px 0 */
+  }
+  
+  .pick-author {
+    font-size: 0.75rem; /* 12px */
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  .pick-time {
+    font-size: 0.75rem; /* 12px */
+    color: #6b7280;
+    margin: 0.25rem 0 0 0; /* 4px 0 0 0 */
+  }
+  
+  /* Recommended Topics */
+  .topics-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* 8px */
+    margin-bottom: 1rem; /* 16px */
+  }
+  
+  .topic-button {
+    padding: 0.5rem 1rem; /* 8px 16px */
+    background-color: #f3f4f6;
+    border: none;
+    border-radius: 9999px;
+    font-size: 0.875rem; /* 14px */
+    color: #374151;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .topic-button:hover {
+    background-color: #e5e7eb;
+  }
+  
+  /* Who to Follow */
+  .follow-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* 24px */
+  }
+  
+  .follow-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .follow-content {
+    display: flex;
+    gap: 0.75rem; /* 12px */
+  }
+  
+  .follow-avatar {
+    width: 2rem; /* 32px */
+    height: 2rem; /* 32px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  
+  .follow-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .follow-info {
+    flex: 1;
+  }
+  
+  .follow-name-container {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem; /* 4px */
+  }
+  
+  .follow-name {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    color: #111827;
+    margin: 0;
+  }
+  
+  .follow-bio {
+    font-size: 0.75rem; /* 12px */
+    color: #6b7280;
+    margin: 0.25rem 0 0 0; /* 4px 0 0 0 */
+  }
+  
+  .follow-type {
+    font-size: 0.75rem; /* 12px */
+    color: #6b7280;
+    margin: 0.25rem 0 0 0; /* 4px 0 0 0 */
+  }
+  
+  .follow-button {
+    padding: 0.25rem 1rem; /* 4px 16px */
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+    font-size: 0.875rem; /* 14px */
+    color: #374151;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 1rem; /* 16px */
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+  }
+  
+  .follow-button:hover {
+    background-color: #f9fafb;
+  }
+  
+  /* See More Links */
+  .see-more-link {
+    background: none;
+    border: none;
+    font-size: 0.875rem; /* 14px */
+    color: #059669;
+    cursor: pointer;
+    margin-top: 1rem; /* 16px */
+    padding: 0;
+    transition: color 0.2s ease;
+  }
+  
+  .see-more-link:hover {
+    color: #047857;
+  }
+  
+  /* Reading List */
+  .reading-list-description {
+    font-size: 0.875rem; /* 14px */
+    color: #4b5563;
+    margin: 0 0 0.75rem 0; /* 0 0 12px 0 */
+    line-height: 1.5;
+  }
+  
+  .inline-icon {
+    display: inline;
+    width: 1rem; /* 16px */
+    height: 1rem; /* 16px */
+    vertical-align: middle;
+  }
+  
+  /* Show sidebar shows only on large screens */
+  @media (min-width: 1024px) { /* lg */
+    .sidebar {
+      display: block;
+    }
+  }

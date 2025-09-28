@@ -1,9 +1,9 @@
 import React from 'react';
-import { BookOpen, Star,Hand, MessageCircle, Bookmark, MoreHorizontal } from 'lucide-react';
 import Header from './Header';
 import NavigationTabs from './components/NavigationTabs/NavigationTab';
 import ArticleCard from './components/ArticleCard/ArticleCard';
 import Sidebar from './components/SidebarComponent/Sidebar';
+import './Homepage.css';
 
 // Main App Component
 const MediumHomepage = () => {
@@ -79,27 +79,25 @@ const MediumHomepage = () => {
   ];
 
   return (
-      <div className="min-h-screen bg-white">
-        <Header />
-        <NavigationTabs />
-        <div className="max-w-7xl mx-auto px-2 xs:px-3 sm:px-6 py-3 xs:py-4 sm:py-8">
-          <div className="flex flex-col lg:flex-row">
-            {/* Main Content */}
-            <main className="flex-1 lg:max-w-3xl w-full">
-              <div className="space-y-4 xs:space-y-6 sm:space-y-0">
-                {articles.map((article, index) => (
-                  <ArticleCard key={index} {...article} />
-                ))}
-              </div>
-            </main>
-            
-            {/* Sidebar - Hidden on mobile, visible on desktop */}
-            <div className="hidden lg:block">
-              <Sidebar />
+    <div className="app-container">
+      <Header />
+      <NavigationTabs />
+      <div className="main-container">
+        <div className="content-wrapper">
+          {/* Main Content */}
+          <main className="main-content">
+            <div className="articles-container">
+              {articles.map((article, index) => (
+                <ArticleCard key={index} {...article} />
+              ))}
             </div>
-          </div>
+          </main>
+          
+          {/* Sidebar - Hidden on mobile, visible on desktop */}
+          <Sidebar />
         </div>
       </div>
+    </div>
   );
 };
 

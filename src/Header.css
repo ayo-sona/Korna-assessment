@@ -1,0 +1,51 @@
+/* Header.css */
+
+.header {
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  
+  .header-container {
+    max-width: 80rem; /* 1280px */
+    margin: 0 auto;
+    padding: 0 1rem; /* 16px */
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.5rem; /* 56px */
+  }
+  
+  .logo-section {
+    flex-shrink: 0;
+  }
+  
+  .logo {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 700;
+    color: black;
+    margin: 0;
+  }
+  
+  .actions-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* 8px */
+    flex-shrink: 0;
+  }
+  
+  /* Responsive breakpoints */
+  @media (min-width: 640px) { /* sm */
+    .header-container {
+      padding: 0 1.5rem; /* 24px */
+    }
+    
+    .actions-section {
+      gap: 0; 
+    }
+  }
