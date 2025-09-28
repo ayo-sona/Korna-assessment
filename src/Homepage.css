@@ -1,3 +1,5 @@
+/* MediumHomepage.css */
+
 .app-container {
   min-height: 100vh;
   background-color: white;
@@ -25,13 +27,11 @@
   gap: 1rem; /* 16px */
 }
 
-
+/* Image alignment styles */
 .article-item {
   display: flex;
-  align-items: center; 
+  align-items: center; /* Vertically center content */
   gap: 1rem;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid #f0f0f0;
 }
 
 .article-content {
@@ -40,57 +40,35 @@
 
 .article-image {
   flex-shrink: 0;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.article-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-/* Author info and metadata alignment */
-.article-meta {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.article-meta img {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
   vertical-align: middle;
 }
 
-/* Article title and text */
-.article-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 0.5rem;
-  color: #1a1a1a;
+.article-image img {
+  display: block;
+  vertical-align: middle;
+  object-fit: cover;
 }
 
-.article-excerpt {
-  color: #757575;
-  font-size: 1rem;
-  line-height: 1.4;
-  margin-bottom: 0.75rem;
+/* For inline images within text */
+.article-content img {
+  vertical-align: middle;
+  display: inline-block;
 }
 
-.article-stats {
+/* Alternative: If you want images to align with the baseline of text */
+.baseline-aligned img {
+  vertical-align: baseline;
+}
+
+/* For text that contains inline images */
+.text-with-images {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  color: #757575;
-  font-size: 0.875rem;
+  gap: 0.5rem;
+}
+
+.text-with-images img {
+  vertical-align: middle;
 }
 
 /* Responsive breakpoints */
