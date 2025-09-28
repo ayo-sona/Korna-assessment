@@ -1,0 +1,69 @@
+/* NavigationTabs.css */
+
+.navigation-container {
+    border-bottom: 1px solid #e5e7eb;
+    background-color: white;
+  }
+  
+  .navigation-wrapper {
+    max-width: 80rem; /* 1280px */
+    margin: 0 auto;
+    padding-left: 0.75rem; /* 12px */
+    padding-right: 0.75rem; /* 12px */
+  }
+  
+  .navigation-tabs {
+    display: flex;
+    gap: 1rem; /* 16px */
+  }
+  
+  .tab-button {
+    padding-top: 0.75rem; /* 12px */
+    padding-bottom: 0.75rem; /* 12px */
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: none;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    color: #4b5563;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .tab-button:hover {
+    color: #1f2937;
+  }
+  
+  .tab-button.active {
+    border-bottom-color: black;
+    color: black;
+  }
+  
+  /* Responsive breakpoints */
+  @media (min-width: 475px) { /* xs */
+    .navigation-wrapper {
+      padding-left: 1rem; /* 16px */
+      padding-right: 1rem; /* 16px */
+    }
+    
+    .navigation-tabs {
+      gap: 1.5rem; /* 24px */
+    }
+    
+    .tab-button {
+      padding-top: 1rem; /* 16px */
+      padding-bottom: 1rem; /* 16px */
+    }
+  }
+  
+  @media (min-width: 640px) { /* sm */
+    .navigation-wrapper {
+      padding-left: 1.5rem; /* 24px */
+      padding-right: 1.5rem; /* 24px */
+    }
+    
+    .navigation-tabs {
+      gap: 2rem; /* 32px */
+    }
+  }

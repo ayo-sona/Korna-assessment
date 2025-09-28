@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandsClapping } from "@fortawesome/free-solid-svg-icons";
+import './ArticleCard.css';
 
 export default function ArticleCard({
   publication,
@@ -42,76 +43,76 @@ export default function ArticleCard({
   };
 
   return (
-    <article className="py-4 xs:py-6 sm:py-8 border-b border-gray-200 last:border-b-0">
-      <div className="flex justify-between items-center space-x-2 xs:space-x-3 sm:space-x-6">
-        <div className="flex-1 min-w-0">
-          {/* Clapped indicator */}
+    <article className="article-card">
+      <div className="article-content">
+        <div className="article-main">
+          {/* Featured indicator */}
           {featured && (
-            <div className="flex items-center space-x-1 mb-2 xs:mb-3 py-2 xs:py-3">
-              <div className="w-3 h-3 xs:w-4 xs:h-4 flex items-center justify-center">
+            <div className="featured-indicator">
+              <div className="clap-icon-container">
                 <FontAwesomeIcon
                   icon={faHandsClapping}
-                  className="text-gray-600 w-3 h-3 xs:w-4 xs:h-4"
+                  className="clap-icon"
                 />
               </div>
-              <span className="text-xs xs:text-sm text-gray-600">Trey Huffine clapped</span>
+              <span className="featured-text">Trey Huffine clapped</span>
             </div>
           )}
 
           {/* Author info */}
-          <div className="flex items-center space-x-1 xs:space-x-2 mb-2 xs:mb-3">
-            <div className="w-5 h-5 xs:w-6 xs:h-6 flex items-center justify-center flex-shrink-0">
+          <div className="author-info">
+            <div className="author-avatar">
               <img 
                 src={favicon} 
                 alt={publication} 
-                className="w-full h-full object-cover rounded-full"
+                className="avatar-img"
               />
             </div>
-            <span className="text-xs xs:text-sm text-gray-600 truncate">
-              in <span className="font-medium text-black">{publication}</span>{" "}
+            <span className="author-text">
+              in <span className="publication-name">{publication}</span>{" "}
               by {author}
             </span>
           </div>
 
           {/* Article content */}
-          <h2 className="text-base xs:text-lg sm:text-xl font-bold text-gray-900 mb-1 xs:mb-2 leading-tight hover:text-gray-700 cursor-pointer line-clamp-3">
+          <h2 className="article-title">
             {title}
           </h2>
-          <p className="text-sm xs:text-base text-gray-600 mb-3 xs:mb-4 leading-relaxed line-clamp-2 xs:line-clamp-3">
+          <p className="article-subtitle">
             {subtitle}
           </p>
 
           {/* Article stats */}
-          <div className="flex items-center space-x-2 xs:space-x-3 sm:space-x-6 text-xs xs:text-sm text-gray-500 overflow-x-auto">
-            <span className="flex-shrink-0">{timeAgo}</span>
-            <div className="flex items-center space-x-1 cursor-pointer flex-shrink-0">
+          <div className="article-stats">
+            <span className="time-ago">{timeAgo}</span>
+            <div className="stat-item">
               <FontAwesomeIcon 
                 icon={faHandsClapping} 
-                className="w-3 h-3 xs:w-4 xs:h-4"
+                className="stat-icon"
               />
               <span>{claps}</span>
             </div>
-            <div className="flex items-center space-x-1 cursor-pointer flex-shrink-0">
-              <MessageCircle className="w-3 h-3 xs:w-4 xs:h-4" />
+            <div className="stat-item">
+              <MessageCircle className="stat-icon" />
               <span>{responses}</span>
             </div>
-            <div className="flex-1 min-w-0"></div>
-            <div className="flex items-center space-x-1 xs:space-x-2 sm:space-x-4 flex-shrink-0">
-              <MinusCircle className="w-4 h-4 xs:w-5 xs:h-5 hover:text-gray-700 cursor-pointer" />
-              <Bookmark className="w-4 h-4 xs:w-5 xs:h-5 hover:text-gray-700 hidden lg:block cursor-pointer" />
-              <MoreHorizontal className="w-4 h-4 xs:w-5 xs:h-5 hover:text-gray-700 cursor-pointer" />
+            <div className="stats-spacer"></div>
+            <div className="action-buttons">
+              <MinusCircle className="action-icon" />
+              <Bookmark className="action-icon bookmark-icon" />
+              <MoreHorizontal className="action-icon" />
             </div>
           </div>
         </div>
 
         {/* Article image */}
         {image && (
-          <div className="flex-shrink-0">
-            <div className="w-16 h-12 xs:w-20 xs:h-16 sm:w-32 sm:h-20 bg-gray-200 rounded overflow-hidden">
+          <div className="article-image-container">
+            <div className="article-image-wrapper">
               <img 
                 src={image} 
                 alt={title}
-                className="w-full h-full object-cover"
+                className="article-image"
                 onError={handleImageError}
               />
             </div>
