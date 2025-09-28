@@ -1,6 +1,37 @@
 /* Header.css */
 
-.header {
+/* Open in App Button */
+.open-in-app-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    margin: 0 auto; /* Centers the button */
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .open-in-app-btn:hover {
+    background-color: #f9fafb;
+  }
+  
+  .open-in-app-btn span {
+    text-transform: capitalize;
+  }
+  
+  /* Hide button on larger screens */
+  @media (min-width: 640px) {
+    .open-in-app-btn {
+      display: none;
+    }
+  }
+  
+  .header {
     background-color: white;
     border-bottom: 1px solid #e5e7eb;
     position: sticky;
