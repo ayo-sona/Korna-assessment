@@ -15,6 +15,13 @@
     cursor: pointer;
     transition: background-color 0.2s ease;
   }
+
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #e5e7eb; /* Light gray instead of dark */
+    margin: 0; /* Remove default margins */
+  }
   
   .open-in-app-btn:hover {
     background-color: #f9fafb;

@@ -10,6 +10,7 @@ export default function Header() {
         <button className="open-in-app-btn">
             <span>open in app <ExternalLink size={12} /></span>
         </button>
+        <hr />
       <div className="header-container">
         <div className="header-content">
           {/* Logo */}
